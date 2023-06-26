@@ -56,10 +56,7 @@ body {
 }
 
 .main-app {
-  min-height: calc(100%);  
   background-color: $background;
-  display: flex;
-  flex-direction: column;
 }
 
 .user-img {
