@@ -1,0 +1,17 @@
+@import '../../../styles.scss';
+
+.app-header {
+    @include flex-vertically-center;
+    justify-content: space-between;
+    padding-inline: $l-inline-padding;
+    background-color: $background;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    height: 60px;
+
+    .logo-container {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        font-size: rem(30px);
+    }
+}
