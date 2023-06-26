@@ -1,0 +1,12 @@
+<section class="knowledge-questions">
+    <h1>Knowledge Questions</h1>
+    <form action="" class="quiz-select-form">
+        <div class="form-item">
+            <label for="topic">Select Quiz Topic:</label>
+            <select id="topic" name="topic" class="form-control" ngModel>
+                <option *ngFor="let topic of quizTopics" [value]="topic">{{ topic }}</option>
+            </select>
+        </div>
+        <button class="select-quiz primary" type="submit">Create Quiz</button>
+    </form>
+</section>

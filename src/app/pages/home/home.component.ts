@@ -6,5 +6,13 @@ import { Component } from '@angular/core';
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent {
+  sections = [
+    {
+      title: 'Knowledge Questions',
+      description: '',
+      imgUrl: '',
+      path: '/knowledge'
+    }
+  ]
 
 }

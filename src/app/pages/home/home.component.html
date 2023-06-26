@@ -1,1 +1,8 @@
-<p>home works!</p>
+<section class="home">
+    <ul class="sections" role="list">
+        <li class="section-item" *ngFor="let section of sections"  [routerLink]="section.path" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}">
+            <h2>{{section.title}}</h2>
+            <img src="" alt="">
+        </li>
+    </ul>
+</section>

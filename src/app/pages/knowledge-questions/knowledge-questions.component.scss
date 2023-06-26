@@ -1,0 +1,17 @@
+@import "../../../styles.scss";
+
+.knowledge-questions {
+    padding: $inline-p-l;
+    h1 {
+        text-align: center;
+        font-size: rem(24px);
+        font-family: cursive;
+        margin-block-end: 20px
+    }
+    .quiz-select-form {
+        .form-item {
+            @include flex-vertically-center;
+            gap: 40px;
+        }
+    }
+}
