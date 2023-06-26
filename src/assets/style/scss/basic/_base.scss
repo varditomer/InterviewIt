@@ -60,12 +60,6 @@ body {
   background-color: $background;
   display: flex;
   flex-direction: column;
-  &:has(> .loading) {
-    background-color: unset !important;
-  }
-  > *:not(header, footer, .Toastify) {
-    flex: 1;
-  }
 }
 
 .user-img {
