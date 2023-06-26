@@ -11,7 +11,8 @@ export class HomeComponent {
       title: 'Knowledge Questions',
       description: '',
       imgUrl: '',
-      path: '/knowledge'
+      path: '/knowledge',
+      svg: './'
     }
   ]
 

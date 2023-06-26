@@ -43,7 +43,8 @@ html {
 html,
 #root,
 body {
-  height: 100%;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: $text;
 }
 
 /* Set core body defaults */
@@ -58,7 +59,6 @@ body {
 .main-app {
   background-color: $background;
 }
-
 
 .user-img {
   border-radius: 4em;
@@ -87,7 +87,7 @@ svg {
   html:focus-within {
     scroll-behavior: auto;
   }
-  
+
   *,
   *::before,
   *::after {

@@ -6,12 +6,22 @@
         text-align: center;
         font-size: rem(24px);
         font-family: cursive;
-        margin-block-end: 20px
+        margin-block-end: 20px;
     }
     .quiz-select-form {
         .form-item {
             @include flex-vertically-center;
             gap: 40px;
+            font-size: rem(22px);
+            font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+            input,
+            select {
+                font-size: rem(22px);
+                font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+            }
+        }
+        .select-quiz {
+            margin-block: rem(20px);
         }
     }
 }

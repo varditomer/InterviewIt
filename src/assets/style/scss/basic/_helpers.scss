@@ -1,0 +1,29 @@
+@import "../setup/variables";
+
+button {
+    display: block;
+    padding: 1em 2em;
+    border-radius: $border-r-s;
+    cursor: pointer;
+    font-size: rem(18px);
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    margin-inline: auto;
+    &.primary {
+        background-color: $primary-button;
+        color: $text;
+        transition: background-color 0.3s;
+        border: none;
+        &:hover {
+            transform: translate(0, -3px);
+            box-shadow: 0 20px 80px -10px $primary-button;
+        }
+    }
+}
+
+.card {
+    position: relative;
+    background-color: rgba(2, 0, 5, 0.05);
+    padding: $card-p-l;
+    border-radius: $border-r-l;
+    cursor: pointer;
+}

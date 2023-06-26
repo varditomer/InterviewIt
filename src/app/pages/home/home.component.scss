@@ -1,21 +1,24 @@
-@import '../../../styles.scss';
+@import "../../../styles.scss";
 
 .home {
     padding: $inline-p-l;
 
     .sections {
         @include flex-vertically-center;
+        justify-content: space-between;
         .section-item {
-            @include flex-column;
-            gap: 12px;
-            justify-content: space-between;
-            padding: $card-p-l;
-            border-radius: $border-r-l;
-            cursor: pointer;
-            background-color: $secondary-button;
-            height: 160px;
+            // height: 160px;
+            h2 {
+                opacity: 1;
+                color: #000;
+            }
 
+            .section-icon {
+                margin-block-start: 20px;
+                margin-inline: auto;
+                height: max-content;
 
+            }
         }
     }
 }
