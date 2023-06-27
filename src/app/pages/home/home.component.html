@@ -1,7 +1,7 @@
 <section class="home">
     <ul class="sections" role="list">
         <li class="section-item card" *ngFor="let section of sections"  [routerLink]="section.path" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}">
-            <h2>{{section.title}}</h2>
+            <h2 class="section-title">{{section.title}}</h2>
             <svg class="section-icon" width="117" height="117" viewBox="0 0 117 117" fill="none" style="z-index: 5;">
                 <circle cx="58.5" cy="58.5" r="58.5" fill="#fafbee"></circle>
                 <path fill-rule="evenodd" clip-rule="evenodd" d="M89.4669 8.85912L58.0465 63.9419L2.44746 41.7023C9.66585 17.5806 32.0298 0 58.5 0C69.872 0 80.4861 3.24483 89.4669 8.85912Z" fill="#d02fbd" fill-opacity="0.6"></path>
