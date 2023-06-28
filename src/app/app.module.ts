@@ -10,6 +10,7 @@ import { AboutComponent } from './pages/about/about.component';
 import { ContactComponent } from './pages/contact/contact.component';
 import { KnowledgeQuestionsComponent } from './pages/knowledge-questions/knowledge-questions.component';
 import { HttpClientModule } from '@angular/common/http';
+import { KnowledgeQuestionsListComponent } from './components/knowledge-questions-list/knowledge-questions-list.component';
 
 @NgModule({
   declarations: [
@@ -20,6 +21,7 @@ import { HttpClientModule } from '@angular/common/http';
     AboutComponent,
     ContactComponent,
     KnowledgeQuestionsComponent,
+    KnowledgeQuestionsListComponent,
   ],
   imports: [
     BrowserModule,

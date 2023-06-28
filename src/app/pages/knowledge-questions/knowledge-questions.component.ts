@@ -1,5 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
+import { Question } from 'src/app/models/QuestionInterface';
 
 @Component({
   selector: 'app-knowledge-questions',
@@ -10,6 +11,7 @@ export class KnowledgeQuestionsComponent implements OnInit {
   constructor(private http: HttpClient) { }
 
   quizTopics: string[] = ['Math', 'Science', 'History', 'Geography']
+  questions: Question[] = []
 
   ngOnInit() {
     const fileUrl = 'https://raw.githubusercontent.com/Ebazhanov/linkedin-skill-assessments-quizzes/main/reactjs/reactjs-quiz.md';
@@ -30,8 +32,8 @@ export class KnowledgeQuestionsComponent implements OnInit {
       });
   }
 
-  extractQuestionsFromMarkdown(markdownContent: string): any[] {
-    const questions: any[] = [];
+  extractQuestionsFromMarkdown(markdownContent: string) {
+    // const questions: any[] = [];
     console.log(`markdownContent:`, markdownContent)
 
     // Split the Markdown content by lines
@@ -43,13 +45,13 @@ export class KnowledgeQuestionsComponent implements OnInit {
       // Identify lines that indicate the start of a question text(based on Markdown structure)
       if (line.startsWith('#### Q')) {
         // building question obj that contains each part of the Q & A
-        const question = {
+        const question: Question = {
           text: line.replace('#### ', '').trim(),
           code: {
             language: 'javascript',
             content: ''
           },
-          options: [] as string[],
+          options: [],
           answer: '',
         }
 
@@ -87,11 +89,10 @@ export class KnowledgeQuestionsComponent implements OnInit {
 
 
         }
-        questions.push(question)
+        this.questions.push(question)
       }
 
     }
 
-    return questions;
   }
 }

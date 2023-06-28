@@ -1,6 +1,6 @@
 <section class="knowledge-questions">
     <h1>Knowledge Questions</h1>
-    <form action="" class="quiz-select-form">
+    <!-- <form action="" class="quiz-select-form">
         <div class="form-item">
             <label for="topic">Quiz Topic:</label>
             <select id="topic" name="topic" class="form-control" ngModel>
@@ -8,5 +8,6 @@
             </select>
         </div>
         <button class="select-quiz button primary" type="submit">Create Quiz</button>
-    </form>
+    </form> -->
+    <app-knowledge-questions-list [questions]="questions"></app-knowledge-questions-list>
 </section>
