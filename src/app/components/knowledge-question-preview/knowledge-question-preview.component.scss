@@ -2,6 +2,9 @@
 
 .knowledge-question {
     margin-block-end: 10px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
+    border-radius: $border-r-m;
+    padding: $card-p-s;
     .text {
         color: darkcyan;
         font-size: rem(20px);
@@ -22,6 +25,9 @@
         cursor: pointer;
         .question-option-content {
             
+        }
+        &.ans {
+            background-color: green;
         }
 
         &:hover {

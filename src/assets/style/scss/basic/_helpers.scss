@@ -10,12 +10,21 @@ button {
     margin-inline: auto;
     &.primary {
         background-color: $primary-button;
+        background-color: $primary-button;
         color: $text;
         transition: background-color 0.3s;
         border: none;
         &:hover {
             transform: translate(0, -3px);
             box-shadow: 0 20px 80px -10px $primary-button;
+        }
+        &.disabled {
+            opacity: 0.2;
+            cursor: not-allowed;
+            &:hover {
+                transform: unset;
+                box-shadow: unset;
+            }
         }
     }
 }

@@ -1,13 +1,17 @@
 <section class="knowledge-questions">
-    <h1>Knowledge Questions</h1>
-    <!-- <form action="" class="quiz-select-form">
+    <h1>Knowledge Questions Quiz Generator</h1>
+    <form (ngSubmit)="onGenerateQuiz(generateQuizForm)" class="generate-quiz-form" #generateQuizForm="ngForm">
         <div class="form-item">
-            <label for="topic">Quiz Topic:</label>
-            <select id="topic" name="topic" class="form-control" ngModel>
-                <option *ngFor="let topic of quizTopics" [value]="topic">{{ topic }}</option>
+            <label for="subject">Quiz Subject:</label>
+            <select id="subject" name="subject" class="form-control" [(ngModel)]="quizSubject" required>
+                <option *ngFor="let subject of quizSubjects" [value]="subject">{{ subject }}</option>
             </select>
         </div>
-        <button class="select-quiz button primary" type="submit">Create Quiz</button>
-    </form> -->
+        <div *ngIf="quizSubject" class="form-item">
+            <label for="length">Quiz Length</label>
+            <input type="number" min="1" name="length" ngModel required>
+        </div>
+        <button class="generate-quiz-btn button primary" type="submit" [disabled]="!generateQuizForm.valid" [ngClass]="{'disabled': !generateQuizForm.valid}">Create Quiz</button>
+    </form>
     <app-knowledge-questions-list [questions]="questions"></app-knowledge-questions-list>
 </section>

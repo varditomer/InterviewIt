@@ -12,6 +12,8 @@ import { KnowledgeQuestionsComponent } from './pages/knowledge-questions/knowled
 import { HttpClientModule } from '@angular/common/http';
 import { KnowledgeQuestionsListComponent } from './components/knowledge-questions-list/knowledge-questions-list.component';
 import { KnowledgeQuestionPreviewComponent } from './components/knowledge-question-preview/knowledge-question-preview.component';
+import { FormsModule } from '@angular/forms';
+
 
 @NgModule({
   declarations: [
@@ -28,7 +30,8 @@ import { KnowledgeQuestionPreviewComponent } from './components/knowledge-questi
   imports: [
     BrowserModule,
     HttpClientModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

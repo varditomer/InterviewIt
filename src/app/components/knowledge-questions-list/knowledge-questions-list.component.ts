@@ -1,5 +1,5 @@
 import { Component, Input } from '@angular/core';
-import { Question } from 'src/app/models/QuestionInterface';
+import { KnowledgeQuestion } from 'src/app/models/knowledge-questions.interface';
 
 @Component({
   selector: 'app-knowledge-questions-list',
@@ -7,6 +7,6 @@ import { Question } from 'src/app/models/QuestionInterface';
   styleUrls: ['./knowledge-questions-list.component.scss']
 })
 export class KnowledgeQuestionsListComponent {
-  @Input() questions!: Question[] | null
+  @Input() questions!: KnowledgeQuestion[] | null
 
 }

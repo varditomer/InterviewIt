@@ -3,7 +3,7 @@ import hljs from 'highlight.js/lib/core';
 import javascript from 'highlight.js/lib/languages/javascript';
 hljs.registerLanguage('javascript', javascript);
 
-import { Question } from 'src/app/models/QuestionInterface';
+import { KnowledgeQuestion } from 'src/app/models/knowledge-questions.interface';
 
 @Component({
   selector: 'app-knowledge-question-preview',
@@ -11,7 +11,7 @@ import { Question } from 'src/app/models/QuestionInterface';
   styleUrls: ['./knowledge-question-preview.component.scss'],
 })
 export class KnowledgeQuestionPreviewComponent implements OnInit {
-  @Input() question!: Question
+  @Input() question!: KnowledgeQuestion
 
   highlightedCode: any
 
