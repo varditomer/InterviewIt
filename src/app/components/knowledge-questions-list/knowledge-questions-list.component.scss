@@ -1,34 +1,5 @@
 @import "../../../styles.scss";
 
 .knowledge-questions-list {
-    .knowledge-question {
-        margin-block-end: 10px;
-        .text {
-            color: darkcyan;
-            font-size: rem(20px);
-            
-        }
-        .code {
-            .language {
-                font-size: rem(18px);
-                text-decoration: underline 1px solid $accent;
-                text-transform: capitalize;
-
-            }
-        }
-        .option {
-            @include flex-vertically-center;
-            gap: 10px;
-            padding-inline: $inline-p-m;
-            cursor: pointer;
-            .question-option-content {
-                
-            }
-
-            &:hover {
-                background-color: darken($background, 6%);
-                
-            }
-        }
-    }
+    
 }

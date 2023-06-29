@@ -1,15 +1,3 @@
 <section class="knowledge-questions-list">
-    <article class="knowledge-question" *ngFor="let question of questions">
-        <h3 class="text">
-            {{question.text}}
-        </h3>
-        <div *ngIf="question.code.content.length" class="code">
-            <span class="language">{{question.code.language}}</span>
-            <div class="content">{{question.code.content}}</div>
-        </div>
-        <div class="option" *ngFor="let option of question.options">
-            <span class="question-option-decor">[ - ]</span>
-            <div class="question-option-content">{{option}}</div>
-        </div>
-    </article>
+   <app-knowledge-question-preview *ngFor="let question of questions" [question]="question"></app-knowledge-question-preview>
 </section>
