@@ -1,3 +1,22 @@
 <section class="knowledge-questions-list">
-   <app-knowledge-question-preview *ngFor="let question of questions" [question]="question"></app-knowledge-question-preview>
+   <header class="quiz-header">
+      <h1>{{quizParams.subject}} - Quiz</h1>
+      <h3>{{quizParams.length}} Questions</h3>
+   </header>
+
+   <form class="knowledge-quiz-form" #quizForm="ngForm" (ngSubmit)="submitQuiz()">
+
+      <ng-container *ngFor="let question of questions; let questionNumber = index">
+
+         <app-knowledge-question-preview [question]="question" [questionNumber]="questionNumber"
+            (selectedAnswerChange)="selectedAnswers[questionNumber]=$event">
+         </app-knowledge-question-preview>
+
+      </ng-container>
+
+      <button type="submit" class="submit-quiz button primary">
+         Finish Quiz
+      </button>
+   </form>
+
 </section>

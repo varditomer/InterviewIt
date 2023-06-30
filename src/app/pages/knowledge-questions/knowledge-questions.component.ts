@@ -10,7 +10,7 @@ import { KnowledgeQuestionService } from 'src/app/service/knowledge-question.ser
   templateUrl: './knowledge-questions.component.html',
   styleUrls: ['./knowledge-questions.component.scss']
 })
-export class KnowledgeQuestionsComponent {
+export class KnowledgeQuestionsComponent implements OnInit {
   constructor(
     private http: HttpClient,
     private knowledgeQuestionService: KnowledgeQuestionService
@@ -19,10 +19,18 @@ export class KnowledgeQuestionsComponent {
   quizSubjects: string[] = ['rest-api', 'reactjs', 'javascript']
   questions: KnowledgeQuestion[] = []
   quizSubject = ''
+  quizParams: KnowledgeQuestionQuizParams = {
+    subject: 'reactjs',
+    length: 5
+  }
 
-  async onGenerateQuiz(generateQuizForm: NgForm) {
-    const quizParams: KnowledgeQuestionQuizParams = generateQuizForm.value
-    this.questions = await this.knowledgeQuestionService.generateQuiz(quizParams)
+  // async onGenerateQuiz(generateQuizForm: NgForm) {
+  //   this.quizParams = generateQuizForm.value
+  //   this.questions = await this.knowledgeQuestionService.generateQuiz(this.quizParams)
+  // }
+
+  async ngOnInit() {
+    this.questions = await this.knowledgeQuestionService.generateQuiz(this.quizParams)
   }
 
 }

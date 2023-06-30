@@ -27,7 +27,6 @@ export class KnowledgeQuestionService {
     try {
       const markdownContent = await firstValueFrom(this.http.get(fileUrl, { responseType: 'text' }));
       const questions = this._extractQuestionsFromMarkdown(markdownContent, length);
-      console.log(`questions:`, questions);
       return questions;
     } catch (error) {
       console.error('Error fetching Markdown file:', error)
